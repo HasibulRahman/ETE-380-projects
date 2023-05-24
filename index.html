@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CamZenith</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- favicone -->
+    <link rel="shortcut icon" href="images/Logos/CamZenith nobg.png" type="image/x-icon">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/4bcb38cd66.js" crossorigin="anonymous"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Titillium+Web:wght@300&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!----------
+     Header Start
+     ------------>
+    <header>
+        <div class="top-navigation">
+            <div class="website-name">
+                <div>
+                    <img src="images/Logos/CamZenith nobg.png" alt="">
+                </div>
+                <h2>CamZenith</h2>
+            </div>
+            <nav class="nav-details">
+                <a href="" class="nevigation">Home</a>
+                <a href="" class="nevigation">Shop</a>
+                <a href="" class="nevigation">Log In</a>
+                <a href="" class="awesome-logo"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href="" class="awesome-logo"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="" class="awesome-logo"><i class="fa-solid fa-user"></i></a>
+            </nav>
+        </div>
+
+    </header>
+    <!--------- 
+        Header End 
+    ------------>
+
+
+    <!------------
+         Main starts 
+        ----------->
+    <main>
+        <!-- Sliding Image -->
+        <section>
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="images/leicas/leica-3.jpg" style="width:100%">
+                    <div class="text">Buy New Cameras</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="images/leicas/leica.jpg" style="width:100%">
+                    <div class="text">Buy Used Cameras</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="images/leicas/leica-2.jpg" style="width:100%">
+                    <div class="text">Buy Camera Lens</div>
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+
+            </div>
+            <br>
+
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+
+            <script>
+                let slideIndex = 1;
+                showSlides(slideIndex);
+
+                function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                }
+
+                function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                }
+
+                function showSlides(n) {
+                    let i;
+                    let slides = document.getElementsByClassName("mySlides");
+                    let dots = document.getElementsByClassName("dot");
+                    if (n > slides.length) { slideIndex = 1 }
+                    if (n < 1) { slideIndex = slides.length }
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex - 1].style.display = "block";
+                    dots[slideIndex - 1].className += " active";
+                }
+            </script>
+        </section>
+    </main>
+    <!--------
+         Main End 
+        ---------->
+
+    <!------
+            Add Footer 
+            ------->
+    <footer>
+        <div class="about-us">
+            <div>
+                <h2 style="color: #ffe000;">
+                    About Us
+                </h2>
+                <div class="terms">
+                    <a href="">About Us</a>
+                    <a href="">EMI Terms</a>
+                    <a href="">Privacy Policy</a>
+                    <a href="">Terms & Condition</a>
+                </div>
+            </div>
+            <div>
+                <h2 style="color: #ffe000;">Help</h2>
+                <span>
+                    <a href="">Privacy Policy</a>
+                    <a href="">Warranty & Refund Policy</a>
+                </span>
+
+            </div>
+        </div>
+        <hr>
+        <div class="address">
+            <div class="addrese-bar">
+                <h3 style="color:#ffe000">Registered Address</h3>
+                <div class="Raowzan">
+                    <p><i class="fa-solid fa-location-dot"></i>:- Chittagong University of Engineering and
+                        Technology,Raowzan,Chittagong-4347</p>
+                    <p><i class="fa-solid fa-phone"></i>:- +880176978420</p>
+                    <p><i class="fa-solid fa-envelope"></i>:- info@CamZanith.com</p>
+                </div>
+
+            </div>
+            <div>
+                <h3 style="color: #ffe000;">Stay with us with social media</h3>
+                <div class="social-media">
+                    <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-youtube"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+
+            </div>
+        </div>
+
+    </footer>
+</body>
+
+</html>
