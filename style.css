@@ -203,13 +203,25 @@ footer {
 }
 
 .about-us {
-    display: flex;
+    display: block;
     justify-content: center;
     margin-top: 100px;
     padding-top: 50px;
     column-gap: 100px;
     color: white;
     margin-bottom: 50px;
+}
+
+.image-2 {
+    margin-left: 43%;
+    margin-right: 40%;
+}
+
+.terms {
+    display: flex;
+    justify-content: space-around;
+    margin-left: 300px;
+    margin-right: 300px;
 }
 
 .terms a {
