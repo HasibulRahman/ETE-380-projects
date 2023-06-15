@@ -1,19 +1,19 @@
 /*basic reset*/
-* {
+/* * {
     margin: 0;
     padding: 0;
-}
+} */
 
 html {
     height: 100%;
-    /*Image only BG fallback*/
-    /*background = gradient + image pattern combo*/
     background-color: #5f84af;
 }
 
 body {
     font-family: 'Poppins', sans-serif;
     font-family: 'Titillium Web', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -331,11 +331,10 @@ input {
 
 
 
-/* ADD Footer */
-
+/* Added Footer */
 footer {
     background-color: rgb(39, 36, 36);
-    height: 630px;
+    height: 100%;
     width: 100%;
 }
 
