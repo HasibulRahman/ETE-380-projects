@@ -375,7 +375,10 @@ img {
 }
 
 .popular_categories {
-    display: grid;
+    display: flex;
+    flex-grow: 2;
+    gap: 20px;
+    flex-wrap: wrap;
     grid-template-columns: repeat(5, 1fr);
     row-gap: 50px;
 
@@ -571,7 +574,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+    background: transparent;
     cursor: pointer;
     z-index: 8;
 }
@@ -593,6 +596,9 @@ img {
 .pre-btn:hover img,
 .nxt-btn:hover img {
     opacity: 1;
+    background-color: rgb(214, 209, 209);
+    padding: 10px;
+    border-radius: 8px;
 }
 
 .collection-container {
