@@ -148,16 +148,6 @@ img {
     text-align: center;
 }
 
-/* .text-2 {
-    color: black;
-    font-size: 70px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: center;
-} */
-
 /* Number text (1/3 etc) */
 .numbertext {
     color: #f2f2f2;
@@ -372,8 +362,271 @@ img {
 }
 
 
+/* Popular categories */
+.popular {
+    margin: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.popular h2 {
+    font-size: 40px;
+}
+
+.popular_categories {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    row-gap: 50px;
+
+}
+
+.items-1 {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    background-color: #f1eded;
+    border-radius: 7px;
+    padding-top: 0;
+}
+
+.items-1 p {
+    padding-top: 15px;
+    padding-left: 9px;
+    padding-right: 9px;
+    margin: 0;
+    font-size: 20px;
+    padding-bottom: 0;
+    text-align: center;
+}
+
+.items-1 img {
+    padding-bottom: 0;
+    padding-top: 0;
+    object-fit: scale-down;
+
+}
+
+.items-2 img {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    object-fit: cover;
+    padding-top: 0;
+    margin-top: 0;
+
+}
+
+.items-1:hover {
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid; */
+    width: 200px;
+    background-color: #75c0ca;
+    border-radius: 7px;
+    padding-top: 0;
+    color: white;
+}
 
 
+
+
+
+/* Feature Products */
+
+/* PRODUCTS */
+.product {
+    position: relative;
+
+
+}
+
+.product-category {
+    padding: 0 7vw;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-transform: capitalize;
+}
+
+.product-container {
+    padding: 0 7vw;
+    display: flex;
+    scroll-behavior: smooth;
+    overflow-x: auto;
+
+}
+
+.product-container::-webkit-scrollbar {
+    display: none;
+}
+
+.product-card {
+    flex: 0 0 auto;
+    width: 250px;
+    height: 500px;
+    margin-right: 40px;
+    border: 2px solid rgb(40, 184, 223);
+    border-radius: 10px;
+
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.12);
+    transition: transform 0.8s ease;
+
+}
+
+.product-image {
+    position: relative;
+    width: 100%;
+    height: 350px;
+}
+
+.product-image img {
+    object-fit: scale-down;
+}
+
+.product-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.discount-tag {
+    position: absolute;
+    background: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    color: #ff7d7d;
+    right: 10px;
+    top: 10px;
+    text-transform: capitalize;
+}
+
+.card-btn {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    width: 90%;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    background: #67bcc7;
+    border-radius: 5px;
+    transition: 0.5s;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.product-card:hover .card-btn {
+    opacity: 1;
+}
+
+.card-btn:hover {
+    background: #67bcc7;
+    color: #fff;
+}
+
+.product-info {
+    width: 100%;
+    height: 100px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.product-brand {
+    text-transform: uppercase;
+}
+
+.product-short-description {
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+    opacity: 0.5;
+    text-transform: capitalize;
+    margin: 5px 0;
+}
+
+.price {
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.actual-price {
+    margin-left: 20px;
+    opacity: 0.5;
+    text-decoration: line-through;
+}
+
+.pre-btn,
+.nxt-btn {
+    border: none;
+    width: 10vw;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+    cursor: pointer;
+    z-index: 8;
+}
+
+.pre-btn {
+    left: 0;
+    transform: rotate(180deg);
+}
+
+.nxt-btn {
+    right: 0;
+}
+
+.pre-btn img,
+.nxt-btn img {
+    opacity: 0.2;
+}
+
+.pre-btn:hover img,
+.nxt-btn:hover img {
+    opacity: 1;
+}
+
+.collection-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+
+.collection {
+    position: relative;
+}
+
+.collection img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.collection p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+    text-transform: capitalize;
+}
+
+.collection:nth-child(3) {
+    grid-column: span 2;
+    margin-bottom: 10px;
+}
 
 /* Added Footer */
 footer {
